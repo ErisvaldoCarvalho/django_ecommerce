@@ -15,19 +15,14 @@
           <h1>{{title}}</h1>
         </div>
         <div class="container">
-            <div class="row">
-                <div class="col">
-                    <p>{{content}}</p>
-                    <div class="col-sm-6 col-12">
-                            <form method="POST">{% csrf_token %}
-                                <input type="text" class="form-control" placeholder="Digite seu nome completo" name="fullname">
-                                <input type="email" class="form-control" placeholder="Digite seu e-mail" name="email">
-                                <textarea name="content" class="form-control" placeholder="Digite seu texto aqui"></textarea>
-                                <button type="submit" class="btn btn-default">Enviar</button>
-                            </form>
-                        </div>
-                </div>
-            </div>
+          {% if request.user.is_authenticated %}
+          <div class='row'>
+              <div class='col'>
+                  <h1>Premium</h1>
+                  <p>{{ premium_content }}</p>
+              </div>
+          </div>
+          {% endif %}
         </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
