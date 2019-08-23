@@ -1,2 +1,15 @@
-Anotar comandos neste arquivo
-123
+cd H:\git\virtualenv\virtual01
+scripts\activate
+cd h:\git\src\django_ecommerce
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver
+
+
+
+
+
+
+
+
+H: && cd H:\git\virtualenv\virtual01 && scripts\activate && cd h:\git\src\django_ecommerce && python manage.py makemigrations && python manage.py migrate && python manage.py runserver
